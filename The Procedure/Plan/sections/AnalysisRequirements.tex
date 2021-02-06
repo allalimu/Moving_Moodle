@@ -1,0 +1,42 @@
+\section*{Configurations Extraction Process}
+
+There are 3 systems in Environment that needs to be checked and get its Configurations extracted in order for the moodle to run smoothly:
+
+\begin{enumerate}
+    \item Apache Configurations.
+    \item Mysql Configurations.
+    \item php Configuration.
+\end{enumerate}
+
+\subsection*{Apache Configurations Extraction}
+
+\begin{enumerate}
+    \item Apache Version.
+    \item Apache Actual Configurations for portal.limu.edu.ly .
+\end{enumerate}
+
+\subsection*{MYSQL Configurations Extraction}
+
+The following is the only thing needed, and the rest can be executed as in the moodle documentation.
+
+\begin{itemize}
+    \item MYSQL version.
+\end{itemize}
+
+Can be easily extracted using the following command:
+
+\begin{lstlisting}
+    $ mysql -V
+\end{lstlisting}
+
+
+\subsection*{php Configurations Extraction}
+
+In php, two pieces of information are needed to make an, almost, exact replica:
+
+\begin{enumerate}
+    \item php Version.
+    \item php configurations file location.
+\end{enumerate}
+
+Both can be found in phpinfo inside the moodle administration panel.

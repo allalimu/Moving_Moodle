@@ -1,0 +1,38 @@
+\section*{Operation Steps Analysis}
+
+Generally, there are 3 steps to move a system:
+
+\begin{enumerate}
+    \item Environment Setup.
+    \item Moving all system related files, including Code and DB.
+    \item Adjustments to the new Environment.
+\end{enumerate}
+Before implementing the 2nd step, make sure to put the moodle into maintenance mode; which is only disabled in the new server after the 3rd step is completed.
+
+\subsection*{Environment Setup}
+
+\begin{enumerate}
+    \item Server Base Packages.
+    \\Moodle documentation will suffice for all needed packages.
+    \item Apache Installation.
+    \\Choosing apache service based on the version in server.
+    \item Apache Configurations.
+    \\Extracting Configuration from the old server to implement them in the new server.
+    \item Mysql Installation.
+    \\Version compatibility is important. 
+    \item Mysql Configurations.
+    \\Username and password, along with the right permissions.
+    \item php Installation.
+    \item php configurations.
+\end{enumerate}
+
+\subsection*{Moving Code and DB}
+First, Extract DB using sqldump.
+Then, using scp command, move all files, folders and extracted SQL files between the servers.
+Last, install the DB.
+
+\subsection*{new Environment Adjustments}
+\begin{enumerate}
+    \item Change Folders' Ownership and permissions.
+    \item Run Crontab jobs for Moodle in the new server.
+\end{enumerate}
